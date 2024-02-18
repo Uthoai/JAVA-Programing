@@ -27,6 +27,7 @@ public class BinarySearch {
     }
 
     public static void main(String[] args){
+        @SuppressWarnings("resource")
         Scanner userInput = new Scanner(System.in);
 
         System.out.print("Enter Array Size: ");
