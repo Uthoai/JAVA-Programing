@@ -10,6 +10,7 @@ public class RecursionBasic {
         System.out.print(n+" ");    //1 to 5
     }
  
+
     //Print sum of first n natural numbers...
     public static void printSumOfNum(int i,int n,int sum){
         if (i==n) {
@@ -20,6 +21,7 @@ public class RecursionBasic {
         sum += i;
         printSumOfNum(i+1, n, sum);
     }
+
 
     public static void main(String[] args){
         int n = 5;
