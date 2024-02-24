@@ -22,10 +22,26 @@ public class RecursionBasic {
         printSumOfNum(i+1, n, sum);
     }
 
+    // print x^n (stack height = n)
+    public static int calPower(int x,int n){       //x is value, n is power.
+        if (x == 0) {
+            return 0; 
+        }
+        if (n == 0) {
+            return 1;
+        }
+        int xPowerNum = calPower(x, n-1);
+        int xPower = x * xPowerNum;
+        return xPower;
+    }
+
 
     public static void main(String[] args){
         int n = 5;
         printNum(n);    //call printNum() function, output: 5 4 3 2 1
-        printSumOfNum(1, 5, 0);     //call printSumOfNum() output: 15
+
+        printSumOfNum(1, 50, 0);     //call printSumOfNum() function, output: 15
+
+        System.out.println(calPower(2, 5));
     }
 }
